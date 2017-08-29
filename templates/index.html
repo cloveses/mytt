@@ -5,6 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/static/pure-min.css" />
+<script type="text/javascript" src="/static/jquery-3.2.1.min.js"></script>
     <title></title>
     <style type="text/css">
         div.pure-g {margin: 20 50px;padding: 0 20px;text-align: center;}
@@ -12,6 +13,13 @@
         .pure-u-1 p  button{text-align: left;}
         p.stem {text-align: left;}
     </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#keya").click(function(){
+                $("#key").val('A');
+            });
+        })
+    </script>
 </head>
 <body>
 <div class="pure-g">
@@ -22,7 +30,7 @@
     </div>
     <div class="pure-u-1">
         <p>
-        <button>
+        <button id="keya">
             A The simplest way to configure Jinja2 to load templates for your application looks roughly like this:
         </button>
         </p>
@@ -44,6 +52,9 @@
     <div class="pure-u-1">
     <p>
         <form action="/hc">
+        <input type="hidden" id="key" name="key" value=""/>
+        <input type="hidden" id="seq" name="seq" value="2" />
+        <input type="hidden" id="mytype" name="mytype" value="select" />
         <button type="submit">
             submit
         </button>
